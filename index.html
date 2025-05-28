@@ -76,7 +76,7 @@ Seu pet protegido, sua tranquilidade garantida.</p>
 <section class="services" id="services">
     <div class="container">
         <h2 class="section-title">Serviços prestados</h2>
-        <div class="services-container"> <!-- Novo container -->
+        <div class="services-container">
             <div class="services-grid">
 
                         <!-- Card 0 -->
@@ -94,49 +94,49 @@ Seu pet protegido, sua tranquilidade garantida.</p>
             </div>
   <div class="service-card">
                 <img src="assets/convencional.png" alt="">
-                <h3>Básico</h3>
+                <h3>Intermediário</h3>
                 <p>O mais em conta</p>
-                <div class="price">R$ 39,00 /Mês</div>
+                <div class="price">R$ 79,90 /Mês</div>
                 <p>Desconto progressivo por pet</p>
                 <div class="card-buttons">
                     <a href="#contact" class="btn">CONTRATAR</a>
-                    <button class="btn btn-more" data-service="consulta">COBERTURA</button>
+                    <button class="btn btn-more" data-service="intermediario">COBERTURA</button>
                     <a href="#">Tire dúvidas</a>
                 </div>
             </div>
               <div class="service-card">
                 <img src="assets/convencional.png" alt="">
-                <h3>Básico</h3>
+                <h3>Premium</h3>
                 <p>O mais em conta</p>
-                <div class="price">R$ 39,00 /Mês</div>
+                <div class="price">R$ 119,90 /Mês</div>
                 <p>Desconto progressivo por pet</p>
                 <div class="card-buttons">
                     <a href="#contact" class="btn">CONTRATAR</a>
-                    <button class="btn btn-more" data-service="consulta">COBERTURA</button>
+                    <button class="btn btn-more" data-service="premium">COBERTURA</button>
                     <a href="#">Tire dúvidas</a>
                 </div>
             </div>
               <div class="service-card">
                 <img src="assets/convencional.png" alt="">
-                <h3>Básico</h3>
+                <h3>Silvestres</h3>
                 <p>O mais em conta</p>
-                <div class="price">R$ 39,00 /Mês</div>
+                <div class="price">R$ 119,90 /Mês</div>
                 <p>Desconto progressivo por pet</p>
                 <div class="card-buttons">
                     <a href="#contact" class="btn">CONTRATAR</a>
-                    <button class="btn btn-more" data-service="consulta">COBERTURA</button>
+                    <button class="btn btn-more" data-service="silvestres">COBERTURA</button>
                     <a href="#">Tire dúvidas</a>
                 </div>
             </div>
               <div class="service-card">
                 <img src="assets/convencional.png" alt="">
-                <h3>Básico</h3>
+                <h3>Super Premium</h3>
                 <p>O mais em conta</p>
-                <div class="price">R$ 39,00 /Mês</div>
+                <div class="price">R$ 179,90 /Mês</div>
                 <p>Desconto progressivo por pet</p>
                 <div class="card-buttons">
                     <a href="#contact" class="btn">CONTRATAR</a>
-                    <button class="btn btn-more" data-service="consulta">COBERTURA</button>
+                    <button class="btn btn-more" data-service="super-premium">COBERTURA</button>
                     <a href="#">Tire dúvidas</a>
                 </div>
             </div>
@@ -150,111 +150,295 @@ Seu pet protegido, sua tranquilidade garantida.</p>
 
 <!-- Seção Cobertura -->
 <section class="coverage" id="coverage">
-    <div class="container">
-        <h2 class="section-title">Cobertura dos Planos</h2>
+    <div class="coverage-card" id="coverage-basico">
+        <h3>Plano Básico</h3>
+        <h4>Sua opção mais em conta</h4>
         
-        <!-- Card Básico -->
-        <div class="coverage-card" id="coverage-basico">
-            <h3>Plano Básico</h3>
-            <div class="coverage-details">
-                <ul>
-                    <li><i class="fas fa-check"></i> Consultas clínicas ilimitadas</li>
-                    <li><i class="fas fa-check"></i> Vacinas anuais</li>
-                    <li><i class="fas fa-check"></i> Exames básicos (até 2 por ano)</li>
-                    <li><i class="fas fa-check"></i> Desconto em medicamentos (10%)</li>
-                    <li><i class="fas fa-times"></i> Cirurgias (não incluído)</li>
-                    <li><i class="fas fa-times"></i> Atendimento emergencial (não incluído)</li>
-                </ul>
-                <div class="back-button">
-                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
-                        Voltar para os Planos
-                    </button>
+        <div class="coverage-sections">
+            <!-- Seção Consultas -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-stethoscope"></i>
+                    <h5>Consultas</h5>
+                </div>
+                <p class="section-description">Consultas em horário comercial e fora de horário comercial, mediante agendamento e ligação pelo celular de atendimentos. Total de 2 ao ano, consulta noturna em emergência ou domingo/feriado. A periodicidade entre uma consulta e outra é de 30 dias (retorno não é considerado consulta).</p>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta (08:00 às 18:00)</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta Noturna (18:00 às 20:00)</span>
+ 
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta Noturna (20:00 às 08:00)</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta especialidade</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta no Domingo/Feriado</span>
+ 
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Vacinas -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-syringe"></i>
+                    <h5>Vacinas</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">V10 Importada</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Anti-rábica Importada</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">V8 Importada</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Microchip Internacional</span>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Tratamento Integrativo -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-spa"></i>
+                    <h5>Tratamento Integrativo</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Reiki</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Cristalterapia</span>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Outros Procedimentos -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-procedures"></i>
+                    <h5>Outros Procedimentos</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Drenagem de abscesso</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Abdominocentese</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Taxa Curativos</span>
+    
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Taxa de uso da sala</span>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Exames Laboratoriais -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-microscope"></i>
+                    <h5>Exames Laboratoriais</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Hemograma (com plaquetas)</span>
+
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Card Básico -->
-        <div class="coverage-card" id="coverage-basico">
-            <h3>Plano Básico</h3>
-            <div class="coverage-details">
-                <ul>
-                    <li><i class="fas fa-check"></i> Consultas clínicas ilimitadas</li>
-                    <li><i class="fas fa-check"></i> Vacinas anuais</li>
-                    <li><i class="fas fa-check"></i> Exames básicos (até 2 por ano)</li>
-                    <li><i class="fas fa-check"></i> Desconto em medicamentos (10%)</li>
-                    <li><i class="fas fa-times"></i> Cirurgias (não incluído)</li>
-                    <li><i class="fas fa-times"></i> Atendimento emergencial (não incluído)</li>
-                </ul>
-                <div class="back-button">
-                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
-                        Voltar para os Planos
-                    </button>
+        <!-- Seção Cobertura -->
+<section class="coverage" id="coverage">
+    <div class="coverage-card" id="coverage-basico">
+        <h3>Plano Básico</h3>
+        <h4>Sua opção mais em conta</h4>
+        
+        <div class="coverage-sections">
+            <!-- Seção Consultas -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-stethoscope"></i>
+                    <h5>Consultas</h5>
+                </div>
+                <p class="section-description">Consultas em horário comercial e fora de horário comercial, mediante agendamento e ligação pelo celular de atendimentos. Total de 2 ao ano, consulta noturna em emergência ou domingo/feriado. A periodicidade entre uma consulta e outra é de 30 dias (retorno não é considerado consulta).</p>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta (08:00 às 18:00)</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta Noturna (18:00 às 20:00)</span>
+ 
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta Noturna (20:00 às 08:00)</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta especialidade</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Consulta no Domingo/Feriado</span>
+ 
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <!-- Seção Vacinas -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-syringe"></i>
+                    <h5>Vacinas</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">V10 Importada</span>
 
-        <!-- Card Básico -->
-        <div class="coverage-card" id="coverage-basico">
-            <h3>Plano Básico</h3>
-            <div class="coverage-details">
-                <ul>
-                    <li><i class="fas fa-check"></i> Consultas clínicas ilimitadas</li>
-                    <li><i class="fas fa-check"></i> Vacinas anuais</li>
-                    <li><i class="fas fa-check"></i> Exames básicos (até 2 por ano)</li>
-                    <li><i class="fas fa-check"></i> Desconto em medicamentos (10%)</li>
-                    <li><i class="fas fa-times"></i> Cirurgias (não incluído)</li>
-                    <li><i class="fas fa-times"></i> Atendimento emergencial (não incluído)</li>
-                </ul>
-                <div class="back-button">
-                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
-                        Voltar para os Planos
-                    </button>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Anti-rábica Importada</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">V8 Importada</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Microchip Internacional</span>
+
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <!-- Seção Tratamento Integrativo -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-spa"></i>
+                    <h5>Tratamento Integrativo</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Reiki</span>
 
-        <!-- Card Básico -->
-        <div class="coverage-card" id="coverage-basico">
-            <h3>Plano Básico</h3>
-            <div class="coverage-details">
-                <ul>
-                    <li><i class="fas fa-check"></i> Consultas clínicas ilimitadas</li>
-                    <li><i class="fas fa-check"></i> Vacinas anuais</li>
-                    <li><i class="fas fa-check"></i> Exames básicos (até 2 por ano)</li>
-                    <li><i class="fas fa-check"></i> Desconto em medicamentos (10%)</li>
-                    <li><i class="fas fa-times"></i> Cirurgias (não incluído)</li>
-                    <li><i class="fas fa-times"></i> Atendimento emergencial (não incluído)</li>
-                </ul>
-                <div class="back-button">
-                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
-                        Voltar para os Planos
-                    </button>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Cristalterapia</span>
+
+                    </div>
                 </div>
             </div>
-        </div>
+            
+            <!-- Seção Outros Procedimentos -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-procedures"></i>
+                    <h5>Outros Procedimentos</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Drenagem de abscesso</span>
 
-        <!-- Card Básico -->
-        <div class="coverage-card" id="coverage-basico">
-            <h3>Plano Básico</h3>
-            <div class="coverage-details">
-                <ul>
-                    <li><i class="fas fa-check"></i> Consultas clínicas ilimitadas</li>
-                    <li><i class="fas fa-check"></i> Vacinas anuais</li>
-                    <li><i class="fas fa-check"></i> Exames básicos (até 2 por ano)</li>
-                    <li><i class="fas fa-check"></i> Desconto em medicamentos (10%)</li>
-                    <li><i class="fas fa-times"></i> Cirurgias (não incluído)</li>
-                    <li><i class="fas fa-times"></i> Atendimento emergencial (não incluído)</li>
-                </ul>
-                <div class="back-button">
-                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
-                        Voltar para os Planos
-                    </button>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Abdominocentese</span>
+
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Taxa Curativos</span>
+    
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-name">Taxa de uso da sala</span>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Exames Laboratoriais -->
+            <div class="coverage-section">
+                <div class="section-header">
+                    <i class="fas fa-microscope"></i>
+                    <h5>Exames Laboratoriais</h5>
+                </div>
+                
+                <div class="benefit-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-name">Hemograma (com plaquetas)</span>
+
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Adicione os outros cards de cobertura aqui seguindo o mesmo padrão -->
         
+        <div class="back-button">
+            <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
+                Voltar para os Planos
+            </button>
+        </div>
+    </div>
+
+    <!-- Cards para os outros planos (ocultos inicialmente) -->
+    <div class="coverage-card" id="coverage-intermediario" style="display: none;">
+        <!-- Conteúdo do plano intermediário -->
+        <h3>Plano Intermediário</h3>
+        <h4>Equilíbrio entre custo e benefício</h4>
+        <!-- Estrutura similar ao plano básico -->
+    </div>
+
+    <div class="coverage-card" id="coverage-premium" style="display: none;">
+        <!-- Conteúdo do plano premium -->
+        <h3>Plano Premium</h3>
+        <h4>Cobertura ampla para seu pet</h4>
+        <!-- Estrutura similar ao plano básico -->
+    </div>
+
+    <div class="coverage-card" id="coverage-silvestres" style="display: none;">
+        <!-- Conteúdo do plano silvestres -->
+        <h3>Plano Silvestres</h3>
+        <h4>Especial para animais exóticos</h4>
+        <!-- Estrutura similar ao plano básico -->
+    </div>
+
+    <div class="coverage-card" id="coverage-super-premium" style="display: none;">
+        <!-- Conteúdo do plano super premium -->
+        <h3>Plano Super Premium</h3>
+        <h4>A melhor cobertura do mercado</h4>
+        <!-- Estrutura similar ao plano básico -->
     </div>
 </section>
 
@@ -271,9 +455,6 @@ Seu pet protegido, sua tranquilidade garantida.</p>
         </div>
     </div>
 </section>
-
-
-
 
 <script src="index.js"></script>
 </body>
