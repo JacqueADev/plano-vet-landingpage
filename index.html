@@ -937,71 +937,112 @@
     </section>
 
      <!-- Formulário de Contato -->
-    <section class="contact-form-container" id="contact">
-        <div class="container">
-            <h2 class="section-title">Formulário de Contato</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="tutorName" class="required-field">Nome do tutor</label>
-                    <input type="text" id="tutorName" name="tutorName" required>
-                </div>
+<section class="contact-form-container" id="contact">
+    <div class="container">
+        
+        
+        <div class="contact-columns">
+            <!-- Formulário de Contratação -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <h2 class="section-title">Formulário de Contratação</h2>
+                    <div class="form-group">
+                        <label for="tutorName" class="required-field">Nome do tutor</label>
+                        <input type="text" id="tutorName" name="tutorName" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="phone" class="required-field">Telefone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
+                    <div class="form-group">
+                        <label for="phone" class="required-field">Telefone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
+                    <div class="form-group">
+                        <label for="cpf" class="required-field">CPF</label>
+                        <input type="documento" id="cpf" name="cpf" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="city">Cidade</label>
-                    <input type="text" id="city" name="city">
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
 
-                <div class="form-group">
-                    <label for="petName" class="required-field">Nome do pet</label>
-                    <input type="text" id="petName" name="petName" required>
-                </div>
+                    <div class="form-group">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city">
+                    </div>
 
-                <div class="form-group">
-                    <label for="species" class="required-field">Espécie</label>
-                    <input type="text" id="species" name="species" required>
-                </div>
+                    <div class="form-group">
+                        <label for="petName" class="required-field">Nome do pet</label>
+                        <input type="text" id="petName" name="petName" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="age">Idade</label>
-                    <input type="text" id="age" name="age">
-                </div>
+                    <div class="form-group">
+                        <label for="species" class="required-field">Espécie</label>
+                        <input type="text" id="species" name="species" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="petCount">Quantos animais deseja cadastrar?</label>
-                    <input type="number" id="petCount" name="petCount" min="1" value="1">
-                </div>
+                    <div class="form-group">
+                        <label for="age">Idade</label>
+                        <input type="text" id="age" name="age">
+                    </div>
 
-                <div class="form-group">
-                    <label for="plan" class="required-field">Plano de interesse</label>
-                    <select id="plan" name="plan" required>
-                        <option value="">Selecione...</option>
-                        <option value="Básico">Básico</option>
-                        <option value="Intermediário">Intermediário</option>
-                        <option value="Premium">Premium</option>
-                        <option value="Silvestres">Silvestres</option>
-                        <option value="Super Premium">Super Premium</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label for="petCount">Quantos animais deseja cadastrar?</label>
+                        <input type="number" id="petCount" name="petCount" min="1" value="1">
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Mensagem adicional (opcional)</label>
-                    <textarea id="message" name="message"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="plan" class="required-field">Plano de interesse</label>
+                        <select id="plan" name="plan" required>
+                            <option value="">Selecione...</option>
+                            <option value="Básico">Básico</option>
+                            <option value="Intermediário">Intermediário</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Silvestres">Silvestres</option>
+                            <option value="Super Premium">Super Premium</option>
+                        </select>
+                    </div>
 
-                <button type="button" class="form-submit" onclick="sendToWhatsApp()">Contratar</button>
-            </form>
+                    <div class="form-group">
+                        <label for="message">Mensagem adicional (opcional)</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+
+                    <button type="button" class="form-submit" onclick="sendToWhatsApp()">Contratar</button>
+                </form>
+            </div>
+
+            <!-- Seção de Dúvidas -->
+            <div class="doubts-section">
+                <div class="doubts-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-question-circle"></i>
+                        <i class="fas fa-question"></i>
+                        <i class="far fa-question-circle"></i>
+                    </div>
+                </div>
+                <h1>Ainda com dúvidas?</h1>
+                <h2>Nos conte como podemos ajudá-lo</h2>
+                
+                <form class="doubts-form">
+                    <div class="form-group">
+                        <input type="text" id="doubtsName" name="doubtsName" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="doubtsPhone" name="doubtsPhone" placeholder="Telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="doubtsEmail" name="doubtsEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="doubtsMessage" name="doubtsMessage" placeholder="Descreva sua dúvida aqui..." required></textarea>
+                    </div>
+                    <button type="button" class="btn doubts-submit" onclick="sendDoubtsToWhatsApp()">Enviar</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <script src="index.js"></script>
 </body>

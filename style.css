@@ -483,6 +483,242 @@ nav {
     margin-right: 10px;
 }
 
+/* Formulário de Contato */
+.contact-form-container {
+    padding: 50px 0;
+    background-color: var(--cor-fonte);
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--cor-fundo);
+}
+
+.required-field::after {
+    content: " *";
+    color: #f44336;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--cor-buttons);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(27, 143, 145, 0.2);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-submit {
+    background-color: var(--cor-buttons);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-submit:hover {
+    background-color: #0e7274;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Layout dos formulários lado a lado */
+
+.contact-columns {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Formulário de Contratação mais compacto */
+.contact-form-wrapper {
+    flex: 1.5; /* Dá mais espaço para este formulário */
+    max-width: 800px;
+    background-color: white;
+    padding: 10px; /* Reduzi o padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Espaço entre campos reduzido */
+}
+
+.contact-form .form-group {
+    margin-bottom: 0; /* Remove margem inferior padrão */
+}
+
+/* Campos que devem ocupar duas colunas */
+.contact-form .form-group:nth-last-child(-n+3) {
+    grid-column: span 2;
+}
+
+/* Formulário de Dúvidas mais compacto */
+.doubts-section {
+    flex: 1;
+    max-width: 400px; /* Largura reduzida */
+    background-color: white;
+    padding: 20px; /* Padding reduzido */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    align-self: center; /* Alinha ao centro*/
+    margin-top: 0;
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .contact-form {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    
+    .contact-form .form-group:nth-last-child(-n+3) {
+        grid-column: span 1;
+    }
+    
+    .doubts-section {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+/* Ajustes para formulário de dúvidas */
+.doubts-section h1 {
+    color: var(--cor-fundo);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.doubts-section h2 {
+    color: var(--cor-buttons);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.doubts-image {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: var(--cor-buttons);
+}
+
+.placeholder-image i {
+    margin: 0 10px;
+    opacity: 0.8;
+}
+
+.doubts-form .form-group {
+    margin-bottom: 15px;
+}
+
+.doubts-form input,
+.doubts-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.doubts-form textarea {
+    min-height: 200px;
+}
+
+.btn.doubts-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.0rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .contact-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-form-wrapper,
+    .doubts-section {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Responsividade do formulário */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-submit {
+        padding: 12px 20px;
+    }
+}
+
+/* Estilo para grupos de formulário em linha (opcional) */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 1200px) {
     .services-grid {
