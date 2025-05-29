@@ -5,17 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const serviceType = this.getAttribute('data-service');
             
-            document.getElementById('coverage').scrollIntoView({
-                behavior: 'smooth'
+            // Rolagem suave para o card específico
+            document.getElementById(`coverage-${serviceType}`).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
-            
-            // Esconde todos os cards
-            document.querySelectorAll('.coverage-card').forEach(card => {
-                card.style.display = 'none';
-            });
-            
-            // Mostra apenas o card correspondente
-            document.getElementById(`coverage-${serviceType}`).style.display = 'block';
         });
     });
 });

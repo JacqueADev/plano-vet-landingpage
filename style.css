@@ -1,8 +1,8 @@
 :root {
-    --cor-fonte-link-1: #d0bf87;
-    --cor-fonte:#ebd3b1; 
-    --cor-fundo: #8a5d0f;
-    --cor-buttons: #b88423;
+    --cor-fonte-link-1: #78af99;
+    --cor-fonte:#12ac9f; 
+    --cor-fundo: #084948;
+    --cor-buttons: #1b8f91;
     --cor-fonte-link-2: #be8b2d85; 
 }
 
@@ -24,7 +24,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 5px 0;
-    background: #6d4815;
+    background: #0e7274;
 }
 
 nav {
@@ -66,7 +66,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--cor-fonte-link-2);
+    color: #ffffff;
 }
 
 /* Seção Hero */
@@ -256,7 +256,7 @@ nav {
 }
 
 .btn:hover {
-    background-color: #9a6e1e;
+    background-color: #76a2a4;
     transform: translateY(-2px);
 }
 
@@ -264,25 +264,34 @@ nav {
     background-color: var(--cor-fonte-link-1);
 }
 
-/* Seção Cobertura - NOVA VERSÃO */
-.coverage {
-    padding: 80px 20px;
-    background-color: var(--cor-fonte);
-    min-height: 100vh;
+/* Estilos específicos para a versão com todos os cards visíveis */
+.coverage .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .coverage-card {
     background-color: white;
     border-radius: 15px;
     padding: 30px;
-    margin: 30px 0;
+    margin: 30px auto;
     width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
 }
+
+/* Bordas coloridas para cada plano */
+#coverage-basico { border-top: 5px solid #3ddd42; }
+#coverage-intermediario { border-top: 5px solid #2196F3; }
+#coverage-premium { border-top: 5px solid #FFC107; }
+#coverage-silvestres { border-top: 5px solid #9C27B0; }
+#coverage-super-premium { border-top: 5px solid #F44336; }
 
 .coverage-card h3 {
     color: var(--cor-fundo);
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -295,12 +304,16 @@ nav {
     font-weight: normal;
 }
 
+/* Espaçamento entre os cards */
+.coverage-card + .coverage-card {
+    margin-top: 40px;
+}
+
+/* Melhorias para seções internas */
 .coverage-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 1600px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .coverage-section {
@@ -310,58 +323,76 @@ nav {
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .coverage-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .coverage-card {
+        padding: 20px 15px;
+    }
+}
+
 .section-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #eee;
 }
 
 .section-header i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--cor-buttons);
 }
 
 .section-header h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--cor-fundo);
     margin: 0;
 }
 
 .section-description {
     color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
     padding: 0 10px;
 }
 
 .benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 10px;
 }
 
 .benefit-item {
     display: flex;
-    justify-content: space-between;
-    background: white;
-    padding: 12px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0;
+    position: relative;
 }
 
-.benefit-item:hover {
-    transform: translateY(-3px);
+.benefit-item::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23b88423"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
 }
 
 .benefit-name {
-    color: #444;
-    font-size: 0.95rem;
+    color: #555;
+    font-size: 0.9rem;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .benefit-waiting {
@@ -371,17 +402,44 @@ nav {
     font-size: 0.9rem;
 }
 
-.benefit-waiting i {
-    color: #28a745;
-}
-
-.benefit-waiting .fa-clock {
-    color: #ffc107;
-}
-
 .back-button {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
+}
+
+/* Tabela de desconto progressivo */
+.discount-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.discount-table th, .discount-table td {
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.discount-table th {
+    background-color: var(--cor-buttons);
+    color: white;
+}
+
+.discount-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.discount-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-title {
+    text-align: center;
+    margin: 15px 0px;
+    color: var(--cor-fundo);
+    font-weight: bold;
 }
 
 /* Localização */
@@ -439,6 +497,11 @@ nav {
     .hero-text {
         max-width: 100%;
     }
+
+    /* Ajustes para telas grandes */
+    .benefit-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
@@ -474,11 +537,12 @@ nav {
     }
     
     .coverage-card {
-        padding: 20px;
+        padding: 15px;
+        width: 95%;
     }
     
     .coverage {
-        padding: 80px 15px;
+        padding: 30px 15px;
     }
 }
 
@@ -504,11 +568,15 @@ nav {
     .hero-text h2 {
         font-size: 1.1rem;
     }
+
+    .coverage-card {
+        width: 100%;
+    }
 }
 
 /* Ajustes para telas muito grandes */
 @media (min-width: 1800px) {
     .benefit-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
 }
