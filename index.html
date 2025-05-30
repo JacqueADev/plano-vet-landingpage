@@ -27,13 +27,9 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>O primeiro plano de saúde veterinário da cidade chegou!</h1>
-                    <h2>Atendimento especializado que cabe no seu bolso! </h2>
-                    <p>Chegamos para transformar a forma como você cuida do seu pet. Somos o primeiro plano de saúde veterinário da cidade, com 5 opções acessíveis, pensadas para diferentes perfis e necessidades.
+                    <h1>O primeiro plano de saúde veterinário nascido em Jaboticabal Chegou!</h1>
+                    <h2>Garanta agora o melhor cuidado para quem te ama incondicionalmente!</h2>
 
-    Atendemos animais domésticos e silvestres, com cobertura em uma ampla gama de especialidades veterinárias — tudo para garantir um atendimento completo, ágil e de qualidade.
-
-    Seu pet protegido, sua tranquilidade garantida.</p>
                 </div>
                 <div class="hero-image">
                     <img src="assets/logo-do-plano.png" alt="Foto de perfil" loading="lazy">
@@ -42,6 +38,22 @@
         </div>
     </section>
 
+    <!-- Seção apresentação -->
+<section class="presents">
+    <div class="container">
+        <div class="hero-content reversed"> <!-- Adicionei a classe "reversed" -->
+            <div class="present-image">
+                <img src="assets/fundo-amarelo-dog-png.png" alt="Cachorro feliz" loading="lazy">
+            </div>
+            <div class="presents-text">
+                <h2 class="presentation-title">Nunca foi tão fácil cuidar do seu pet!</h2>
+                <p class="lead-text">Chegamos para transformar a forma como você cuida do seu pet! <br> Somos o primeiro plano de saúde veterinário nascido e criado em Jaboticabal e totalmente pensado para proteger a família multiespécie que vive com você!</p>
+                
+                <p class="regular-text">Com 5 opções pensadas para diferentes perfis e necessidades, atendemos animais domésticos e silvestres, com cobertura em uma ampla gama de especialidades veterinárias — tudo para garantir um atendimento completo, ágil e de qualidade. Seu pet protegido, sua tranquilidade garantida.</p>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Beneficios -->
     <section class="beneficios">
         <div class="container">
@@ -51,8 +63,16 @@
                     <i class="fas fa-stethoscope"></i>
                     <p>Consultas</p>
                 </div>
-                <div class="beneficio-method">
+                  <div class="beneficio-method">
                     <i class="fas fa-syringe"></i>
+                    <p>Vacinas</p>
+                </div>
+                  <div class="beneficio-method">
+                    <i class="fas fa-microchip"></i>
+                    <p>Microchipagem</p>
+                </div>
+                <div class="beneficio-method">
+                    <i class="fas fa-procedures"></i>
                     <p>Cirurgias</p>
                 </div>
                 <div class="beneficio-method">
@@ -67,6 +87,19 @@
                     <i class="fas fa-ambulance"></i>
                     <p>Atendimento emergencial</p>
                 </div>
+                  <div class="beneficio-method">
+                    <i class="fas fa-clinic-medical"></i>
+                    <p>Internações</p>
+                </div>
+                
+                 <div class="beneficio-method">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <p>Tratamentos integrativos</p>
+                </div>
+                 <div class="beneficio-method">
+                    <i class="fas fa-wallet"></i>
+                    <p>Pagamento facilitado</p>
+                </div>
             </div>
         </div>
     </section>
@@ -78,74 +111,77 @@
             <div class="services-container">
                 <div class="services-grid">
                     <!-- Card 1 - Básico -->
-                    <div class="service-card">
+                    <div class="service-card" data-service="basico">
                         <i class="fas fa-paw"></i>
                         <h3>Básico</h3>
                         <p>O mais em conta</p>
                         <div class="price">R$ 39,00 /Mês</div>
-                        <p>Desconto progressivo por pet</p>
+                        
                         <div class="card-buttons">
                             <a href="#contact" class="btn">CONTRATAR</a>
                             <button class="btn btn-more" data-service="basico">COBERTURA</button>
-                            <a href="#">Tire dúvidas</a>
+                            
                         </div>
                     </div>
                     
                     <!-- Card 2 - Intermediário -->
-                    <div class="service-card">
+                    <div class="service-card" data-service="intermediario">
                         <i class="fas fa-bone"></i>
                         <h3>Intermediário</h3>
                         <p>Equilíbrio perfeito</p>
                         <div class="price">R$ 79,90 /Mês</div>
-                        <p>Desconto progressivo por pet</p>
+                      
                         <div class="card-buttons">
                             <a href="#contact" class="btn">CONTRATAR</a>
                             <button class="btn btn-more" data-service="intermediario">COBERTURA</button>
-                            <a href="#">Tire dúvidas</a>
+                            
                         </div>
                     </div>
                     
                     <!-- Card 3 - Premium -->
-                    <div class="service-card">
+                    <div class="service-card" data-service="premium">
                         <i class="fas fa-medal"></i>
                         <h3>Premium</h3>
                         <p>Cobertura ampla</p>
                         <div class="price">R$ 119,90 /Mês</div>
-                        <p>Desconto progressivo por pet</p>
+                        
                         <div class="card-buttons">
                             <a href="#contact" class="btn">CONTRATAR</a>
                             <button class="btn btn-more" data-service="premium">COBERTURA</button>
-                            <a href="#">Tire dúvidas</a>
+                            
                         </div>
                     </div>
                     
-                    <!-- Card 4 - Silvestres -->
-                    <div class="service-card">
-                        <i class="fas fa-kiwi-bird"></i>
-                        <h3>Silvestres</h3>
-                        <p>Especial para exóticos</p>
-                        <div class="price">R$ 119,90 /Mês</div>
-                        <p>Desconto progressivo por pet</p>
-                        <div class="card-buttons">
-                            <a href="#contact" class="btn">CONTRATAR</a>
-                            <button class="btn btn-more" data-service="silvestres">COBERTURA</button>
-                            <a href="#">Tire dúvidas</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 5 - Super Premium -->
-                    <div class="service-card">
+                    <!-- Card 4 - Super Premium -->
+                    <div class="service-card" data-service="super-premium">
                         <i class="fas fa-crown"></i>
                         <h3>Super Premium</h3>
                         <p>Cobertura completa</p>
                         <div class="price">R$ 179,90 /Mês</div>
-                        <p>Desconto progressivo por pet</p>
+                        
                         <div class="card-buttons">
                             <a href="#contact" class="btn">CONTRATAR</a>
                             <button class="btn btn-more" data-service="super-premium">COBERTURA</button>
-                            <a href="#">Tire dúvidas</a>
+                            
                         </div>
                     </div>
+
+                         
+                    <!-- Card 5 - Silvestres -->
+                    <div class="service-card" data-service="silvestres">
+                        <i class="fas fa-kiwi-bird"></i>
+                        <h3>Silvestres</h3>
+                        <p>Especial para exóticos</p>
+                        <div class="price">R$ 119,90 /Mês</div>
+                        
+                        <div class="card-buttons">
+                            <a href="#contact" class="btn">CONTRATAR</a>
+                            <button class="btn btn-more" data-service="silvestres">COBERTURA</button>
+                           
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -282,23 +318,25 @@
         </tr>
         <tr>
             <td>2 Pets</td>
-            <td>R$ 35,10</td>
+            <td>R$ 34,99</td>
         </tr>
         <tr>
             <td>3 Pets</td>
-            <td>R$ 31,20</td>
+            <td>R$ 29,99</td>
         </tr>
         <tr>
             <td>4 Pets</td>
-            <td>R$ 27,30</td>
+            <td>R$ 24,99</td>
         </tr>
         <tr>
             <td>5 Pets</td>
-            <td>R$ 23,40</td>
+            <td>R$ 24,99
+</td>
         </tr>
         <tr>
             <td>6 Pets</td>
-            <td>R$ 19,50</td>
+            <td>R$ 24,99
+</td>
         </tr>
     </tbody>
 </table>
@@ -310,138 +348,191 @@
                 </div>
             </div>
             
-            <!-- Plano Intermediário -->
-            <div class="coverage-card" id="coverage-intermediario">
-                <h3>Plano Intermediário</h3>
-                <h4>Equilíbrio entre custo e benefício</h4>
-                
-                <div class="coverage-sections">
-                    <!-- Seção Consultas -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-stethoscope"></i>
-                            <h5>Consultas</h5>
-                        </div>
-                        <p class="section-description">Consultas ilimitadas em horário comercial (08:00 às 18:00), e 4 consultas noturnas/emergenciais por ano. Periodicidade entre consultas de 15 dias.</p>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Consulta (08:00 às 18:00) - Ilimitadas</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Consulta Noturna (18:00 às 08:00) - 4/ano</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Consulta especialidade - 2/ano</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Consulta no Domingo/Feriado - 2/ano</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Seção Vacinas -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-syringe"></i>
-                            <h5>Vacinas</h5>
-                        </div>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">V10 Importada</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Anti-rábica Importada</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">V8 Importada</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Microchip Internacional</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Vacina Gripe Canina</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Seção Exames -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-microscope"></i>
-                            <h5>Exames Laboratoriais</h5>
-                        </div>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Hemograma completo</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Bioquímico (6 parâmetros)</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Urina tipo I</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Parasitológico de fezes</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Seção Cirurgias -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-procedures"></i>
-                            <h5>Cirurgias</h5>
-                        </div>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Castração (cães até 10kg)</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Cirurgias menores</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Plano Intermediário -->
+<div class="coverage-card" id="coverage-intermediario">
+  <h3>Plano Intermediário</h3>
+  <h4>Equilíbrio entre custo e benefício</h4>
 
-                <div class="table-title">Desconto Progressivo por Pet</div>
-<table class="discount-table">
+  <div class="coverage-sections">
+
+    <!-- Seção Consultas -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-stethoscope"></i>
+        <h5>Consultas</h5>
+      </div>
+      <p class="section-description">
+        Consultas em horário comercial e fora do horário, mediante agendamento e ligação via celular de atendimentos.
+        São 4 consultas por ano, sendo possível utilizar 1 delas para consulta de especialidade, noturna de emergência ou em domingo/feriado.
+        A periodicidade entre consultas é de 30 dias. Retornos não são considerados consulta.
+      </p>
+
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Consulta (08:00 às 18:00)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Consulta Noturna (18:00 às 20:00)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Consulta Noturna (20:00 às 08:00)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Consulta especialidade</span></div>
+        <div class="benefit-item"><span class="benefit-name">Consulta no Domingo / Feriado</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Vacinas -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-syringe"></i>
+        <h5>Vacinas</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">V10 Importada</span></div>
+        <div class="benefit-item"><span class="benefit-name">Anti-rábica Importada</span></div>
+        <div class="benefit-item"><span class="benefit-name">V8 Importada</span></div>
+        <div class="benefit-item"><span class="benefit-name">Microchip Internacional</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Exames Laboratoriais -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-microscope"></i>
+        <h5>Exames Laboratoriais</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Hemograma (com plaquetas)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Parasitológico completo</span></div>
+        <div class="benefit-item"><span class="benefit-name">ALT (TGP)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Uréia</span></div>
+        <div class="benefit-item"><span class="benefit-name">Creatinina</span></div>
+        <div class="benefit-item"><span class="benefit-name">Raspado de pele p/ investigação Microscópica</span></div>
+        <div class="benefit-item"><span class="benefit-name">Parasitológico Simples</span></div>
+        <div class="benefit-item"><span class="benefit-name">Urinálise</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Exames por Imagem -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-x-ray"></i>
+        <h5>Exames por Imagem</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Raio X Simples (1 posição principal)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Raio X Simples (3 posições principais)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Eletrocardiograma</span></div>
+        <div class="benefit-item"><span class="benefit-name">Ultra-sonografia</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Anestesias -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-syringe"></i>
+        <h5>Anestesias</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Geral até 10kg</span></div>
+        <div class="benefit-item"><span class="benefit-name">Geral de 11kg a 25kg</span></div>
+        <div class="benefit-item"><span class="benefit-name">Geral de 26kg a 40kg</span></div>
+        <div class="benefit-item"><span class="benefit-name">Geral acima de 40kg</span></div>
+        <div class="benefit-item"><span class="benefit-name">Anestesia local ou sedação</span></div>
+        <div class="benefit-item"><span class="benefit-name">Anestesia peridural</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Cirurgias Corretivas -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-procedures"></i>
+        <h5>Cirurgias Corretivas</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Sutura de pele (Porte P e M)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Sutura de pele (Porte G)</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Cirurgias Ortopédicas -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-bone"></i>
+        <h5>Cirurgias Ortopédicas</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Penso Esparadrapo ou Gessado</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Cirurgias Sistema Genital -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-venus-mars"></i>
+        <h5>Cirurgias Sistema Genital</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Assistência a Parto Normal</span></div>
+        <div class="benefit-item"><span class="benefit-name">Cesariana Cadela (P ou M)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Cesariana Cadela (G) (1 ao ano)</span></div>
+        <div class="benefit-item"><span class="benefit-name">O.S.H. Cadela P ou M (até 25kg)</span></div>
+        <div class="benefit-item"><span class="benefit-name">O.S.H. Cadela G (acima de 25kg)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Taxa O.S.H. Cesariana Cadela</span></div>
+        <div class="benefit-item"><span class="benefit-name">Orquiectomia Cão</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Tratamento Integrativo -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-leaf"></i>
+        <h5>Tratamento Integrativo</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Reiki</span></div>
+        <div class="benefit-item"><span class="benefit-name">Cristalterapia</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Outros Procedimentos -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-notes-medical"></i>
+        <h5>Outros Procedimentos</h5>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><span class="benefit-name">Drenagem de abscesso (anestesia à parte)</span></div>
+        <div class="benefit-item"><span class="benefit-name">Abdominocentese</span></div>
+        <div class="benefit-item"><span class="benefit-name">Taxa Curativos</span></div>
+        <div class="benefit-item"><span class="benefit-name">Taxa de oxigênio</span></div>
+        <div class="benefit-item"><span class="benefit-name">Taxa de uso da sala</span></div>
+      </div>
+    </div>
+
+    <!-- Seção Taxas -->
+    <div class="coverage-section">
+      <div class="section-header">
+        <i class="fas fa-money-bill-wave"></i>
+        <h5>Taxas</h5>
+      </div>
+      <p class="section-description">Taxa ambulatorial — medicamentos à parte</p>
+    </div>
+
+  </div>
+
+  <div class="table-title">Desconto Progressivo por Pet</div>
+  <table class="discount-table">
     <thead>
-        <tr>
-            <th>Número de Pets</th>
-            <th>Valor por Animal</th>
-        </tr>
+      <tr>
+        <th>Número de Pets</th>
+        <th>Valor por Animal</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1 Pet</td>
-            <td>R$ 39,00</td>
-        </tr>
-        <tr>
-            <td>2 Pets</td>
-            <td>R$ 35,10</td>
-        </tr>
-        <tr>
-            <td>3 Pets</td>
-            <td>R$ 31,20</td>
-        </tr>
-        <tr>
-            <td>4 Pets</td>
-            <td>R$ 27,30</td>
-        </tr>
-        <tr>
-            <td>5 Pets</td>
-            <td>R$ 23,40</td>
-        </tr>
-        <tr>
-            <td>6 Pets</td>
-            <td>R$ 19,50</td>
-        </tr>
+      <tr><td>1 Pet</td><td>R$ 79,90</td></tr>
+      <tr><td>2 Pets</td><td>R$ 74,90</td></tr>
+      <tr><td>3 Pets</td><td>R$ 69,90</td></tr>
+      <tr><td>4 Pets</td><td>R$ 64,90</td></tr>
+      <tr><td>5 Pets</td><td>R$ 64,90</td></tr>
+      <tr><td>6 Pets</td><td>R$ 64,90</td></tr>
     </tbody>
-</table>
+  </table>
                 
                 <div class="back-button">
                     <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
@@ -607,136 +698,6 @@
                 </div>
             </div>
             
-            <!-- Plano Silvestres -->
-            <div class="coverage-card" id="coverage-silvestres">
-                <h3>Plano Silvestres</h3>
-                <h4>Especializado em animais exóticos</h4>
-                
-                <div class="coverage-sections">
-                    <!-- Seção Consultas -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-stethoscope"></i>
-                            <h5>Consultas</h5>
-                        </div>
-                        <p class="section-description">Consultas especializadas para animais silvestres e exóticos, com profissionais capacitados. 4 consultas anuais incluídas, com periodicidade mínima de 30 dias.</p>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Consulta Especializada - 4/ano</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Consulta Emergencial - 2/ano</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Seção Exames -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-microscope"></i>
-                            <h5>Exames Especiais</h5>
-                        </div>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Hemograma completo</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Bioquímico (8 parâmetros)</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Raio-X (2 incidências)</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Exame parasitológico</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Seção Procedimentos -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-procedures"></i>
-                            <h5>Procedimentos</h5>
-                        </div>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Apara de asas (aves)</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Apara de unhas</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Corte de bico (aves)</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Microchipagem</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Seção Internação -->
-                    <div class="coverage-section">
-                        <div class="section-header">
-                            <i class="fas fa-clinic-medical"></i>
-                            <h5>Internação</h5>
-                        </div>
-                        
-                        <div class="benefit-grid">
-                            <div class="benefit-item">
-                                <span class="benefit-name">Internação por 1 dia/ano</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="benefit-name">Oxigenoterapia</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table-title">Desconto Progressivo por Pet</div>
-<table class="discount-table">
-    <thead>
-        <tr>
-            <th>Número de Pets</th>
-            <th>Valor por Animal</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1 Pet</td>
-            <td>R$ 39,00</td>
-        </tr>
-        <tr>
-            <td>2 Pets</td>
-            <td>R$ 35,10</td>
-        </tr>
-        <tr>
-            <td>3 Pets</td>
-            <td>R$ 31,20</td>
-        </tr>
-        <tr>
-            <td>4 Pets</td>
-            <td>R$ 27,30</td>
-        </tr>
-        <tr>
-            <td>5 Pets</td>
-            <td>R$ 23,40</td>
-        </tr>
-        <tr>
-            <td>6 Pets</td>
-            <td>R$ 19,50</td>
-        </tr>
-    </tbody>
-</table>
-                
-                <div class="back-button">
-                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
-                        Voltar para os Planos
-                    </button>
-                </div>
-            </div>
             
             <!-- Plano Super Premium -->
             <div class="coverage-card" id="coverage-super-premium">
@@ -919,9 +880,209 @@
                         Voltar para os Planos
                     </button>
                 </div>
+
+                
+            </div>
+
+                   <!-- Plano Silvestres -->
+            <div class="coverage-card" id="coverage-silvestres">
+                <h3>Plano Silvestres</h3>
+                <h4>Especializado em animais exóticos</h4>
+                
+                <div class="coverage-sections">
+                    <!-- Seção Consultas -->
+                    <div class="coverage-section">
+                        <div class="section-header">
+                            <i class="fas fa-stethoscope"></i>
+                            <h5>Consultas</h5>
+                        </div>
+                        <p class="section-description">Consultas especializadas para animais silvestres e exóticos, com profissionais capacitados. 4 consultas anuais incluídas, com periodicidade mínima de 30 dias.</p>
+                        
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-name">Consulta Especializada - 4/ano</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Consulta Emergencial - 2/ano</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção Exames -->
+                    <div class="coverage-section">
+                        <div class="section-header">
+                            <i class="fas fa-microscope"></i>
+                            <h5>Exames Especiais</h5>
+                        </div>
+                        
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-name">Hemograma completo</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Bioquímico (8 parâmetros)</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Raio-X (2 incidências)</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Exame parasitológico</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção Procedimentos -->
+                    <div class="coverage-section">
+                        <div class="section-header">
+                            <i class="fas fa-procedures"></i>
+                            <h5>Procedimentos</h5>
+                        </div>
+                        
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-name">Apara de asas (aves)</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Apara de unhas</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Corte de bico (aves)</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Microchipagem</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção Internação -->
+                    <div class="coverage-section">
+                        <div class="section-header">
+                            <i class="fas fa-clinic-medical"></i>
+                            <h5>Internação</h5>
+                        </div>
+                        
+                        <div class="benefit-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-name">Internação por 1 dia/ano</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-name">Oxigenoterapia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-title">Desconto Progressivo por Pet</div>
+<table class="discount-table">
+    <thead>
+        <tr>
+            <th>Número de Pets</th>
+            <th>Valor por Animal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1 Pet</td>
+            <td>R$ 39,00</td>
+        </tr>
+        <tr>
+            <td>2 Pets</td>
+            <td>R$ 35,10</td>
+        </tr>
+        <tr>
+            <td>3 Pets</td>
+            <td>R$ 31,20</td>
+        </tr>
+        <tr>
+            <td>4 Pets</td>
+            <td>R$ 27,30</td>
+        </tr>
+        <tr>
+            <td>5 Pets</td>
+            <td>R$ 23,40</td>
+        </tr>
+        <tr>
+            <td>6 Pets</td>
+            <td>R$ 19,50</td>
+        </tr>
+    </tbody>
+</table>
+                
+                <div class="back-button">
+                    <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
+                        Voltar para os Planos
+                    </button>
+                </div>
             </div>
         </div>
     </section>
+
+
+
+ <!-- Seção Como Funciona o Desconto Progressivo -->
+<section class="discount-info">
+    <div class="container">
+        <h2 class="section-title">Como funciona o desconto progressivo por pet?</h2>
+        <div class="discount-steps">
+            <!-- Passo 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Cadastre o primeiro pet</h3>
+                    <p>Valor integral do plano pelo primeiro animal</p>
+                </div>
+            </div>
+            
+            <!-- Passo 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Adicione mais pets</h3>
+                    <p>Você recebe um desconto a cada pet adicionado</p>
+                </div>
+            </div>
+            
+            <!-- Passo 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Economize mais</h3>
+                    <p>Quanto mais pets, maior o desconto em cada um</p>
+                </div>
+            </div>
+            
+            <!-- Passo 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Mesma cobertura</h3>
+                    <p>Todos com os mesmos benefícios do plano</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="discount-example">
+            <h3>Exemplo prático para o Plano Básico:</h3>
+            <div class="example-grid">
+                <div class="example-item">
+                    <span class="example-label">1 pet</span>
+                    <span class="example-value">R$ 39,00/cada</span>
+                </div>
+                <div class="example-item">
+                    <span class="example-label">3 pets</span>
+                    <span class="example-value">R$ 93,60/cada</span>
+                    <span class="example-save">(economize R$ 23,40)</span>
+                </div>
+                <div class="example-item">
+                    <span class="example-label">6 pets</span>
+                    <span class="example-value">R$ 117,00/cada</span>
+                    <span class="example-save">(economize R$ 117,00)</span>
+                </div>
+            </div>
+            <p class="note">* Os valores são exemplificativos e podem variar de acordo com o plano escolhido.</p>
+        </div>
+    </div>
+</section>
 
     <!-- Localização -->
     <section class="location" id="location">
@@ -1043,6 +1204,179 @@
         </div>
     </div>
 </section>
+
+<!-- Seção FAQ com Imagem Decorativa -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        
+        <div class="faq-content-wrapper">
+            <!-- Bloco de Perguntas -->
+            <div class="faq-container">
+           <!-- Pergunta 1 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Como faço para contratar o plano?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Você pode nos contatar preenchendo o formulário de contratação acima, ou se preferir, pode nos visitar em nossa clínica ou entrar em contato pelo WhatsApp. Assim conseguimos lhe passar todos os detalhes adicionais!</p>
+                </div>
+            </div>
+            
+            <!-- Pergunta 2 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Qual a forma de pagamento da contratação?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Disponibilizamos o pagamento por cartão de crédito. Assim todo mês a cobrança é feita automaticamente, sem necessitar de renovação manual!</p>
+                </div>
+            </div>
+            
+            <!-- Pergunta 3 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Posso cancelar a qualquer momento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, o cancelamento pode ser feito a qualquer momento sem multa. Basta nos avisar com 30 dias de antecedência.</p>
+                </div>
+            </div>
+            
+            <!-- Pergunta 4 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Meu pet tem uma condição pré-existente, ele pode ser atendido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, atendemos pets com condições pré-existentes, porém algumas condições específicas podem ter restrições de cobertura nos primeiros 12 meses.</p>
+                </div>
+            </div>
+            
+            <!-- Pergunta 5 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Quais espécies de animais silvestres são atendidas?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Atendemos aves, roedores, répteis e pequenos mamíferos silvestres. Entre em contato para verificar se sua espécie específica está coberta.</p>
+                </div>
+            </div>
+            
+            <!-- Pergunta 6 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Como funcionam as consultas de emergência?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Emergências são atendidas 24 horas. Basta ligar para nosso número de emergência e nosso veterinário de plantão irá orientá-lo.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Como funciona a microchipagem? É segura?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>A microchipagem é um processo simples e seguro em que um pequeno chip eletrônico, do tamanho de um grão de arroz, é implantado sob a pele do animal, geralmente na região do pescoço. O chip contém um número único de identificação que pode ser lido com um scanner apropriado. Esse número é registrado em um banco de dados com as informações do tutor. O procedimento é rápido, praticamente indolor e não oferece riscos à saúde do animal.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>Como sei quais benefícios já usei do meu plano?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Sempre que fizer uma consulta ou utilizar um serviço, você recebe todas as informações do seu saldo atual em seu WhatsApp!</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 9 -->
+            <div class="faq-item">
+                <div class="faq-question-container">
+                    <button class="faq-question">
+                        <span>O plano tem valor mensal atualizado anualmente?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! Anualmente são calculados e feitos aumentos pontuais na mensalidade, conforme necessidade.</p>
+                </div>
+            </div>
+
+    
+
+        </div>
+        
+          <!-- Imagem Decorativa -->
+            <div class="faq-decorative-image">
+                <img src="assets/interrogacao.png" alt="Cachorro e gato sendo atendidos por veterinária" loading="lazy">
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    </div>
+</section>
+
+<!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone"></i> (16) 99964-4497</p>
+                    <p>planovetplanodesaude@gmail.com</p>
+                </div>
+                <div class="footer-column">
+                   <h3>Horário de atendimento</h3>
+                    <p>Segunda a Sexta: 9h às 17h</p>
+                    <p>Sábado e Domingo apenas emergências</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Redes sociais</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/planovet?igsh=MXdocWU5enN3am54eA=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/15fcH2KWJa/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5516999644497&text=Olá%2C%20gostaria%20de%20saber%20mais!&autoload=1&app_absent=0">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Plano Vet. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="index.js"></script>
 </body>
