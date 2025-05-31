@@ -32,7 +32,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 0;
 }
 
@@ -42,12 +42,19 @@ nav {
     padding: 0 20px;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     align-items: center;
-    padding: 10px 0px 10px;
-    margin-left: auto;
+    padding: 10px 0;
+    margin-left: auto; /* Isso empurra os links para a direita */
     font-size: 20px;
 }
 
@@ -77,7 +84,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 90px;
-    
 }
 
 .hero-text {
@@ -88,24 +94,15 @@ nav {
 
 .hero-text h1 {
     font-size: 2.8rem;
-
 }
 
 .degrade-dourado {
-  /* Degradê dourado (ajuste as cores conforme seu projeto) */
-  background: linear-gradient(90deg, #8b7701 0%, #e6c14b 50%, #dbd8c8 100%);
-  
-  /* Corta o fundo para aplicar apenas no texto */
-  -webkit-background-clip: text;
-  background-clip: text;
-  
-  /* Torna o texto transparente para mostrar o degradê */
-  color: transparent;
-  
-  /* Estilo adicional para destacar */
-  font-weight: 800;
-
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background: linear-gradient(90deg, #8b7701 0%, #e6c14b 50%, #dbd8c8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-text h2 {
@@ -127,24 +124,12 @@ nav {
     border-radius: 10px;
 }
 
-/* Seção apresentação - Versão melhorada */
+/* Seção apresentação */
 .presents {
     padding: 50px 0;
     background-color: var(--cor-fonte);
     position: relative;
     overflow: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 60px;
 }
 
 .presents-text {
@@ -204,15 +189,13 @@ nav {
     transform: translateY(-5px);
 }
 
-/* Aumenta apenas a imagem da seção 2 */
 .img-maior {
-    max-width: 800px !important; /* Ou o valor desejado (ex: 120% do original) */
-    max-height: 700px !important; /* Ajuste conforme a proporção */
-    width: auto; /* Mantém a proporção */
+    max-width: 800px !important;
+    max-height: 700px !important;
+    width: auto;
     height: auto;
 }
 
-/* Efeitos decorativos opcionais */
 .presents::before {
     content: '';
     position: absolute;
@@ -225,14 +208,8 @@ nav {
     z-index: 0;
 }
 
-/* Inverte a ordem apenas na seção com a classe .image-right */
 .image-right .hero-content {
-    flex-direction: row-reverse; /* Inverte a posição da imagem e do texto */
-}
-
-/* Opcional: Ajuste o espaçamento se necessário */
-.image-right .hero-content {
-    gap: 60px; /* Mantém o mesmo gap das outras seções */
+    flex-direction: row-reverse;
 }
 
 /* Beneficios */
@@ -314,15 +291,14 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
 }
-/* Estilização dos ícones dos cards de serviço */
+
 .service-card i {
- font-size: 3.5rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
     color: var(--cor-buttons);
     transition: all 0.3s ease;
-    display: flex; /* Já está como flex, o que é bom */
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 80px;
@@ -330,8 +306,8 @@ nav {
     background-color: rgba(27, 143, 145, 0.1);
     border-radius: 50%;
     padding: 15px;
-    margin-left: auto; /* Adiciona */
-    margin-right: auto; /* Adiciona */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes fadeIn {
@@ -349,31 +325,29 @@ nav {
 .service-card:nth-child(4) { animation-delay: 0.4s; }
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 
-/* Efeito hover nos ícones */
 .service-card:hover i {
     transform: scale(1.1);
-    color: var(--cor-fonte); /* Muda a cor ao passar o mouse */
+    color: var(--cor-fonte);
 }
 
-/* Cores específicas para cada card */
 .service-card[data-service="basico"] i {
-    color: #3ddd42; /* Verde para Básico */
+    color: #3ddd42;
 }
 
 .service-card[data-service="intermediario"] i {
-    color: #2196F3; /* Azul para Intermediário */
+    color: #2196F3;
 }
 
 .service-card[data-service="premium"] i {
-    color: #FFC107; /* Amarelo para Premium */
+    color: #FFC107;
 }
 
 .service-card[data-service="super-premium"] i {
-    color: #F44336; /* Vermelho para Super Premium */
+    color: #F44336;
 }
 
 .service-card[data-service="silvestres"] i {
-    color: #9C27B0; /* Roxo para Silvestres */
+    color: #9C27B0;
 }
 
 .service-card h3 {
@@ -432,7 +406,7 @@ nav {
     background-color: var(--cor-fonte-link-1);
 }
 
-/* Estilos específicos para a versão com todos os cards visíveis */
+/* Seção Cobertura */
 .coverage .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -450,7 +424,6 @@ nav {
     position: relative;
 }
 
-/* Bordas coloridas para cada plano */
 #coverage-basico { border-top: 5px solid #3ddd42; }
 #coverage-intermediario { border-top: 5px solid #2196F3; }
 #coverage-premium { border-top: 5px solid #FFC107; }
@@ -472,12 +445,10 @@ nav {
     font-weight: normal;
 }
 
-/* Espaçamento entre os cards */
 .coverage-card + .coverage-card {
     margin-top: 40px;
 }
 
-/* Melhorias para seções internas */
 .coverage-sections {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -552,25 +523,24 @@ nav {
     line-height: 1.4;
 }
 
-.benefit-waiting {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
-}
-
-.back-button {
-    text-align: center;
-    margin-top: 30px;
-}
-
-/* Tabela de desconto progressivo */
 .discount-table {
     width: 100%;
     max-width: 900px;
     margin: 10px auto;
     border-collapse: collapse;
     font-size: 0.9rem;
+}
+
+/* Adicione estas regras */
+.discount-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.example-grid {
+    flex-wrap: wrap;
 }
 
 .discount-table th, .discount-table td {
@@ -598,7 +568,6 @@ nav {
     color: var(--cor-fundo);
     font-weight: bold;
 }
-
 
 /* Estilos para os modais */
 .modal {
@@ -804,6 +773,19 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Adicione isto */
+.back-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.back-button .btn {
+    width: 100%;
+    max-width: 300px;
+}
 
 /* Layout dos formulários lado a lado */
 .contact-columns {
@@ -814,10 +796,10 @@ nav {
 
 /* Formulário de Contratação mais compacto */
 .contact-form-wrapper {
-    flex: 1.5; /* Dá mais espaço para este formulário */
+    flex: 1.5;
     max-width: 800px;
     background-color: white;
-    padding: 10px; /* Reduzi o padding */
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -825,14 +807,13 @@ nav {
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* Espaço entre campos reduzido */
+    gap: 10px;
 }
 
 .contact-form .form-group {
-    margin-bottom: 0; /* Remove margem inferior padrão */
+    margin-bottom: 0;
 }
 
-/* Campos que devem ocupar duas colunas */
 .contact-form .form-group:nth-last-child(-n+3) {
     grid-column: span 2;
 }
@@ -840,16 +821,15 @@ nav {
 /* Formulário de Dúvidas mais compacto */
 .doubts-section {
     flex: 1;
-    max-width: 400px; /* Largura reduzida */
+    max-width: 400px;
     background-color: white;
-    padding: 20px; /* Padding reduzido */
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    align-self: center; /* Alinha ao centro*/
+    align-self: center;
     margin-top: 0;
 }
 
-/* Ajustes para formulário de dúvidas */
 .doubts-section h1 {
     color: var(--cor-fundo);
     font-size: 1.8rem;
@@ -1018,7 +998,7 @@ nav {
     margin-top: 10px;
 }
 
-/* Seção FAQ com Imagem Decorativa - Estilos Base */
+/* Seção FAQ */
 .faq-section {
     padding: 80px 0;
     background-color: var(--cor-fundo);
@@ -1045,7 +1025,6 @@ nav {
     top: 20px;
     align-self: flex-start;
     overflow: hidden;
-    display: none; /* Escondido em mobile por padrão */
 }
 
 .faq-decorative-image img {
@@ -1055,7 +1034,6 @@ nav {
     max-height: 600px;
 }
 
-/* Estilos do FAQ - Versão Aprimorada */
 .faq-item {
     margin-bottom: 15px;
     border-radius: 8px;
@@ -1115,11 +1093,11 @@ nav {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px; /* Aumentado para conteúdo maior */
+    max-height: 500px;
     padding: 0 20px 20px;
 }
 
-/* CTA Section - Mantido do original */
+/* CTA Section */
 .faq-cta {
     text-align: center;
     margin-top: 50px;
@@ -1179,38 +1157,148 @@ footer {
     color: #ffffff;
 }
 
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
 
-/* Responsividade */
-@media (min-width: 992px) {
-    .faq-decorative-image {
-        display: block; /* Mostra a imagem apenas em telas grandes */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
     }
     
-    .faq-container {
-        padding-right: 20px;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #0e7274;
+        padding: 20px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .presents .hero-content,
+    .image-right .hero-content {
+        flex-direction: column;
+    }
+    
+    .contact-columns {
+        flex-direction: column;
+    }
+    
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form .form-group:nth-last-child(-n+3) {
+        grid-column: span 1;
+    }
+    
+    .doubts-section {
+        max-width: 100%;
     }
 }
 
 @media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+    
+    .presentation-title {
+        font-size: 1.8rem;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .beneficios-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .faq-content-wrapper {
         flex-direction: column;
     }
     
-    .faq-container {
+    .faq-decorative-image {
+        display: none;
+    }
+
+    .discount-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+        
+    .example-item {
+        min-width: calc(50% - 10px);
+    }
+
+     .back-button {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .back-button .btn {
+        width: auto;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .beneficios-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .beneficio-method {
         width: 100%;
     }
-}
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero, .presents, .services, .location, .contact-form-container, .faq-section {
+        padding: 40px 0;
+    }
 
-
-
-/* Estilo para grupos de formulário em linha (opcional) */
-.form-row {
-    display: flex;
-    gap: 20px;
-}
-
-.form-row .form-group {
-    flex: 1;
+    .discount-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .example-item {
+        min-width: 100%;
+    }
 }
 
 

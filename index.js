@@ -483,6 +483,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // =============================================
+// 9. MENU MOBILE
+// =============================================
+function setupMobileMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Fecha o menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+}
+
+
+    // =============================================
     // INICIALIZAÇÃO
     // =============================================
     function init() {
@@ -490,6 +512,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupFaqAccordion();
         setupFormMasks();
         setupEventListeners();
+         setupMobileMenu(); // Adicione esta linha
     }
 
     init();
