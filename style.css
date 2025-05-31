@@ -1277,17 +1277,18 @@ footer {
         font-size: 15px;
     }
     
-      .hero {
-        padding-top: 60px;
-        padding-bottom: 20px;
+    .hero {
+        padding-top: 70px; /* Ajuste para mobile */
     }
-
+    
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        margin-top: 10px;
     }
     
     .hero-text h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        padding-top: 10px;
     }
     
     .presentation-title {
