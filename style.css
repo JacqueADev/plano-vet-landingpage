@@ -1210,7 +1210,13 @@ footer {
     
     .nav-links li {
         margin: 12px 0;
-        margin-left: 0;
+       
+       
+       header {
+    height: 60px; /* Adicione uma altura fixa */
+    display: flex;
+    align-items: center;
+} margin-left: 0;
     }
     
     .hero-content {
