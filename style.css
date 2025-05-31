@@ -1417,7 +1417,6 @@ footer {
         color: var(--cor-fundo);
     }
 }
-
 @media (max-width: 480px) {
     .hero {
         padding-top: 65px; /* Ajuste fino para telas muito pequenas */
@@ -1431,7 +1430,6 @@ footer {
         top: 55px; /* Ajuste para acompanhar a altura do header */
     }
 }
-
 
 @media (max-width: 375px) {
     .hero-text h1 {
