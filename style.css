@@ -1418,6 +1418,21 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 65px; /* Ajuste fino para telas muito pequenas */
+    }
+    
+    header {
+        height: 55px; /* Reduz um pouco o header em telas muito pequenas */
+    }
+    
+    .nav-links {
+        top: 55px; /* Ajuste para acompanhar a altura do header */
+    }
+}
+
+
 @media (max-width: 375px) {
     .hero-text h1 {
         font-size: 1.8rem;
