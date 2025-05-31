@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Código existente para os botões de cobertura
+    // 1. Botões de navegação para as coberturas
     const coverageButtons = document.querySelectorAll('.btn-more');
     
     coverageButtons.forEach(button => {
         button.addEventListener('click', function() {
             const serviceType = this.getAttribute('data-service');
             
-            // Rolagem suave para o card específico
             document.getElementById(`coverage-${serviceType}`).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -14,115 +13,128 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Código existente para o formulário principal
+    // 2. Função para enviar formulário principal para WhatsApp (ATUALIZADA)
     function sendToWhatsApp() {
-        // Coletando os dados do formulário
-        const tutorName = document.getElementById('tutorName').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
-        const city = document.getElementById('city').value;
-        const petName = document.getElementById('petName').value;
-        const species = document.getElementById('species').value;
-        const age = document.getElementById('age').value;
-        const petCount = document.getElementById('petCount').value;
-        const plan = document.getElementById('plan').value;
-        const message = document.getElementById('message').value;
+        // Coletando TODOS os dados do formulário
+        const formData = {
+            tutorName: document.getElementById('tutorName').value,
+            phone: document.getElementById('phone').value,
+            cpf: document.getElementById('cpf').value,
+            email: document.getElementById('email').value,
+            adress: document.getElementById('adress').value,
+            neighbor: document.getElementById('neighbor').value,
+            city: document.getElementById('city').value,
+            cep: document.getElementById('cep').value,
+            petName: document.getElementById('petName').value,
+            species: document.getElementById('species').value,
+            gender: document.getElementById('gender').value,
+            raca: document.getElementById('raca').value,
+            age: document.getElementById('age').value,
+            castrado: document.getElementById('castrado').value,
+            petCount: document.getElementById('petCount').value,
+            plan: document.getElementById('plan').value,
+            message: document.getElementById('message').value
+        };
 
-        // Validar campos obrigatórios
-        if (!tutorName || !phone || !petName || !species || !plan) {
+        // Validação dos campos obrigatórios
+        if (!formData.tutorName || !formData.phone || !formData.cpf || !formData.petName || !formData.species || !formData.plan) {
             alert('Por favor, preencha todos os campos obrigatórios (marcados com *)');
             return;
         }
 
-        // Criar a mensagem para o WhatsApp
-        let whatsappMessage = `Olá, gostaria de contratar um plano para meu pet!\n\n`;
-        whatsappMessage += `*Nome do tutor:* ${tutorName}\n`;
-        whatsappMessage += `*Telefone:* ${phone}\n`;
-        if (email) whatsappMessage += `*Email:* ${email}\n`;
-        if (city) whatsappMessage += `*Cidade:* ${city}\n`;
-        whatsappMessage += `*Nome do pet:* ${petName}\n`;
-        whatsappMessage += `*Espécie:* ${species}\n`;
-        if (age) whatsappMessage += `*Idade:* ${age}\n`;
-        whatsappMessage += `*Quantidade de animais:* ${petCount}\n`;
-        whatsappMessage += `*Plano de interesse:* ${plan}\n`;
-        if (message) whatsappMessage += `\n*Mensagem adicional:*\n${message}`;
+        // Criar mensagem detalhada
+        let whatsappMessage = `📋 *SOLICITAÇÃO DE CONTRATAÇÃO* 📋\n\n`;
+        whatsappMessage += `*DADOS DO TUTOR*\n`;
+        whatsappMessage += `▪ Nome: ${formData.tutorName}\n`;
+        whatsappMessage += `▪ Telefone: ${formData.phone}\n`;
+        whatsappMessage += `▪ CPF: ${formData.cpf}\n`;
+        if (formData.email) whatsappMessage += `▪ Email: ${formData.email}\n`;
+        whatsappMessage += `\n*ENDEREÇO*\n`;
+        if (formData.adress) whatsappMessage += `▪ Logradouro: ${formData.adress}\n`;
+        if (formData.neighbor) whatsappMessage += `▪ Bairro: ${formData.neighbor}\n`;
+        if (formData.city) whatsappMessage += `▪ Cidade: ${formData.city}\n`;
+        if (formData.cep) whatsappMessage += `▪ CEP: ${formData.cep}\n`;
+        
+        whatsappMessage += `\n*DADOS DO PET*\n`;
+        whatsappMessage += `▪ Nome: ${formData.petName}\n`;
+        whatsappMessage += `▪ Espécie: ${formData.species}\n`;
+        if (formData.gender) whatsappMessage += `▪ Sexo: ${formData.gender}\n`;
+        if (formData.raca) whatsappMessage += `▪ Raça: ${formData.raca}\n`;
+        if (formData.age) whatsappMessage += `▪ Idade: ${formData.age}\n`;
+        if (formData.castrado) whatsappMessage += `▪ Castrado: ${formData.castrado}\n`;
+        
+        whatsappMessage += `\n*PLANO SOLICITADO*\n`;
+        whatsappMessage += `▪ Plano: ${formData.plan}\n`;
+        whatsappMessage += `▪ Quantidade de animais: ${formData.petCount}\n`;
+        
+        if (formData.message) {
+            whatsappMessage += `\n*MENSAGEM ADICIONAL*\n${formData.message}\n`;
+        }
 
-        // Codificar a mensagem para URL
+        // Codificar e enviar
         const encodedMessage = encodeURIComponent(whatsappMessage);
-
-        // Substitua pelo número de WhatsApp desejado (apenas números, sem espaços ou caracteres especiais)
-        const whatsappNumber = "5511999999999"; // Exemplo: 55 (Brasil) + 11 (DDD) + 999999999 (número)
-
-        // Criar o link do WhatsApp
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-        // Abrir o WhatsApp em uma nova aba
-        window.open(whatsappUrl, '_blank');
+        const whatsappNumber = "5516999644497";
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
     }
 
-    // Código existente para o formulário de dúvidas
+    // 3. Função para enviar formulário de dúvidas para WhatsApp (ATUALIZADA)
     function sendDoubtsToWhatsApp() {
-        // Coletando os dados do formulário de dúvidas
-        const name = document.getElementById('doubtsName').value;
-        const phone = document.getElementById('doubtsPhone').value;
-        const email = document.getElementById('doubtsEmail').value;
-        const message = document.getElementById('doubtsMessage').value;
+        const formData = {
+            name: document.getElementById('doubtsName').value,
+            phone: document.getElementById('doubtsPhone').value,
+            email: document.getElementById('doubtsEmail').value,
+            message: document.getElementById('doubtsMessage').value
+        };
 
-        // Validar campos obrigatórios
-        if (!name || !phone || !message) {
+        if (!formData.name || !formData.phone || !formData.message) {
             alert('Por favor, preencha pelo menos o nome, telefone e sua dúvida');
             return;
         }
 
-        // Criar a mensagem para o WhatsApp
-        let whatsappMessage = `Olá, tenho uma dúvida sobre os planos veterinários!\n\n`;
-        whatsappMessage += `*Nome:* ${name}\n`;
-        whatsappMessage += `*Telefone:* ${phone}\n`;
-        if (email) whatsappMessage += `*Email:* ${email}\n`;
-        whatsappMessage += `\n*Minha dúvida:*\n${message}`;
+        let whatsappMessage = `❓ *SOLICITAÇÃO DE INFORMAÇÕES* ❓\n\n`;
+        whatsappMessage += `*Nome:* ${formData.name}\n`;
+        whatsappMessage += `*Telefone:* ${formData.phone}\n`;
+        if (formData.email) whatsappMessage += `*Email:* ${formData.email}\n`;
+        whatsappMessage += `\n*DÚVIDA:*\n${formData.message}`;
 
-        // Codificar a mensagem para URL
         const encodedMessage = encodeURIComponent(whatsappMessage);
-
-        // Use o mesmo número do formulário principal ou um diferente se preferir
-        const whatsappNumber = "5511999999999"; // Substitua pelo número real
-
-        // Criar o link do WhatsApp
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-        // Abrir o WhatsApp em uma nova aba
-        window.open(whatsappUrl, '_blank');
+        const whatsappNumber = "5516999644497";
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
     }
 
-    // Novo código para o FAQ Accordion
+    // 4. Funcionalidade do FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
-            const faqItem = question.parentElement;
-            const answer = question.nextElementSibling;
+            const faqItem = question.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = question.querySelector('i');
             
-            // Fecha todas as outras respostas
+            // Fecha outros itens
             document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== faqItem) {
+                if (item !== faqItem && item.classList.contains('active')) {
                     item.classList.remove('active');
                     item.querySelector('.faq-answer').style.maxHeight = '0';
                     item.querySelector('.faq-answer').style.padding = '0 20px';
+                    item.querySelector('i').classList.replace('fa-chevron-up', 'fa-chevron-down');
                 }
             });
             
-            // Alterna a resposta atual
+            // Alterna item atual
             faqItem.classList.toggle('active');
             
             if (faqItem.classList.contains('active')) {
                 answer.style.maxHeight = answer.scrollHeight + 'px';
-                answer.style.padding = '0 20px';
+                answer.style.padding = '20px';
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
             } else {
                 answer.style.maxHeight = '0';
                 answer.style.padding = '0 20px';
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
             }
         });
     });
 
-    // Adicionando os event listeners para os botões de envio
+    // 5. Event Listeners para os botões
     if (document.querySelector('.form-submit')) {
         document.querySelector('.form-submit').addEventListener('click', sendToWhatsApp);
     }
@@ -130,4 +142,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.doubts-submit')) {
         document.querySelector('.doubts-submit').addEventListener('click', sendDoubtsToWhatsApp);
     }
+
+    // 6. (Opcional) Abrir primeiro item do FAQ por padrão
+    const firstFaqItem = document.querySelector('.faq-item');
+    if (firstFaqItem) {
+        firstFaqItem.classList.add('active');
+        const firstAnswer = firstFaqItem.querySelector('.faq-answer');
+        const firstIcon = firstFaqItem.querySelector('i');
+        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+        firstAnswer.style.padding = '20px';
+        firstIcon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+    }
+
+    // 7. Validação do CPF (Adicional)
+    document.getElementById('cpf')?.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+        value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        e.target.value = value;
+    });
+
+    // 8. Validação do CEP (Adicional)
+    document.getElementById('cep')?.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        value = value.replace(/^(\d{5})(\d)/, '$1-$2');
+        e.target.value = value;
+    });
 });

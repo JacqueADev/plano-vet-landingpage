@@ -839,7 +839,7 @@ nav {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    max-width: 700px;
+    max-width: 850px;
     margin: 30px auto;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
@@ -896,7 +896,7 @@ nav {
     margin-top: 10px;
 }
 
-/* Seção FAQ com Imagem Decorativa */
+/* Seção FAQ com Imagem Decorativa - Estilos Base */
 .faq-section {
     padding: 80px 0;
     background-color: var(--cor-fundo);
@@ -933,14 +933,18 @@ nav {
     max-height: 600px;
 }
 
-
-/* Estilos do FAQ (mantidos do original) */
+/* Estilos do FAQ - Versão Aprimorada */
 .faq-item {
     margin-bottom: 15px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .faq-question {
@@ -956,15 +960,20 @@ nav {
     font-size: 1rem;
     color: var(--cor-fundo);
     font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f5f5f5;
 }
 
 .faq-question i {
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
     margin-left: 10px;
     color: var(--cor-buttons);
 }
 
-.faq-question.active i {
+.faq-item.active .faq-question i {
     transform: rotate(180deg);
 }
 
@@ -978,15 +987,17 @@ nav {
 
 .faq-answer p {
     padding: 20px 0;
-    color: #555;
+    color: #000000;
     line-height: 1.6;
+    margin: 0;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 300px;
+    max-height: 500px; /* Aumentado para conteúdo maior */
     padding: 0 20px 20px;
 }
 
+/* CTA Section - Mantido do original */
 .faq-cta {
     text-align: center;
     margin-top: 50px;
@@ -998,7 +1009,6 @@ nav {
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
-
 
 /* Rodapé */
 footer {

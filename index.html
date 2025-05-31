@@ -1523,17 +1523,32 @@
             <div class="example-grid">
                 <div class="example-item">
                     <span class="example-label">1 pet</span>
-                    <span class="example-value">R$ 39,00</span>
+                    <span class="example-value">R$ 39,99</span>
                 </div>
                 <div class="example-item">
                     <span class="example-label">2 pets</span>
                     <span class="example-value">R$ 69,98</span>
-                    <span class="example-save">(economize R$ 8,02)</span>
+                    <span class="example-save">(economize R$ 10,00)</span>
+                </div>
+                <div class="example-item">
+                    <span class="example-label">3 pet</span>
+                    <span class="example-value">R$ 89,97</span>
+                    <span class="example-save">(economize R$ 30,00)</span>
                 </div>
                 <div class="example-item">
                     <span class="example-label">4 pets</span>
                     <span class="example-value">R$ 99,96</span>
-                    <span class="example-save">(economize R$ 56,04)</span>
+                    <span class="example-save">(economize R$ 60,00)</span>
+                </div>
+                <div class="example-item">
+                    <span class="example-label">5 pet</span>
+                    <span class="example-value">R$ 124,95</span>
+                    <span class="example-save">(economize R$ 75,00)</span>
+                </div>
+                <div class="example-item">
+                    <span class="example-label">6 pet</span>
+                    <span class="example-value">R$ 149,94</span>
+                    <span class="example-save">(economize R$ 90,00)</span>
                 </div>
             </div>
             <p class="note">* Os valores são exemplificativos e podem variar de acordo com o plano escolhido.</p>
@@ -1580,13 +1595,28 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email" class="required-field">Email</label>
                         <input type="email" id="email" name="email">
                     </div>
 
+                     <div class="form-group">
+                        <label for="adress" class="required-field">Endereço</label>
+                        <input type="text" id="adress" name="adress">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="neighbor" class="required-field">Bairro</label>
+                        <input type="text" id="neighbor" name="neighbor">
+                    </div>
+
                     <div class="form-group">
-                        <label for="city">Cidade</label>
+                        <label for="city" class="required-field">Cidade</label>
                         <input type="text" id="city" name="city">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="cep" class="required-field">CEP</label>
+                        <input type="text" id="cep" name="cep">
                     </div>
 
                     <div class="form-group">
@@ -1600,12 +1630,27 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="age">Idade</label>
+                        <label for="gender" class="required-field">Sexo</label>
+                        <input type="text" id="gender" name="gender">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="raca" class="required-field">Sexo</label>
+                        <input type="text" id="raca" name="raca">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age" class="required-field">Idade</label>
                         <input type="text" id="age" name="age">
                     </div>
 
                     <div class="form-group">
-                        <label for="petCount">Quantos animais deseja cadastrar?</label>
+                        <label for="castrado" class="required-field">Castrado?</label>
+                        <input type="text" id="castrado" name="castrado">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petCount" class="required-field">Quantos animais deseja cadastrar?</label>
                         <input type="number" id="petCount" name="petCount" min="1" value="1">
                     </div>
 
@@ -1616,8 +1661,9 @@
                             <option value="Básico">Básico</option>
                             <option value="Intermediário">Intermediário</option>
                             <option value="Premium">Premium</option>
-                            <option value="Silvestres">Silvestres</option>
                             <option value="Super Premium">Super Premium</option>
+                            <option value="Silvestres">Silvestres</option>
+                            
                         </select>
                     </div>
 
