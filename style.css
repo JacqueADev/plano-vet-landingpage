@@ -13,9 +13,14 @@
     font-family: 'Nunito', sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     line-height: 1.6;
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -47,6 +52,7 @@ nav {
     cursor: pointer;
     font-size: 24px;
     color: white;
+    padding: 10px;
 }
 
 .nav-links {
@@ -54,7 +60,7 @@ nav {
     list-style: none;
     align-items: center;
     padding: 10px 0;
-    margin-left: auto; /* Isso empurra os links para a direita */
+    margin-left: auto;
     font-size: 20px;
 }
 
@@ -67,6 +73,8 @@ nav {
     color: #ffffff;
     font-weight: 500;
     transition: color 0.3s;
+    padding: 5px 0;
+    display: block;
 }
 
 .nav-links a:hover {
@@ -94,6 +102,7 @@ nav {
 
 .hero-text h1 {
     font-size: 2.8rem;
+    line-height: 1.2;
 }
 
 .degrade-dourado {
@@ -238,7 +247,8 @@ nav {
     border-radius: 10px;
     padding: 15px 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     transition: transform 0.3s;
 }
 
@@ -531,7 +541,6 @@ nav {
     font-size: 0.9rem;
 }
 
-/* Adicione estas regras */
 .discount-steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -580,6 +589,7 @@ nav {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    touch-action: manipulation;
 }
 
 .modal-content {
@@ -773,7 +783,6 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Adicione isto */
 .back-button {
     display: flex;
     flex-direction: column;
@@ -787,14 +796,12 @@ nav {
     max-width: 300px;
 }
 
-/* Layout dos formulários lado a lado */
 .contact-columns {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
 
-/* Formulário de Contratação mais compacto */
 .contact-form-wrapper {
     flex: 1.5;
     max-width: 800px;
@@ -818,7 +825,6 @@ nav {
     grid-column: span 2;
 }
 
-/* Formulário de Dúvidas mais compacto */
 .doubts-section {
     flex: 1;
     max-width: 400px;
@@ -1148,6 +1154,7 @@ footer {
 .social-links a {
     color: #fff;
     font-size: 20px;
+    padding: 8px;
 }
 
 .copyright {
@@ -1158,11 +1165,21 @@ footer {
 }
 
 /* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
 @media (max-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         max-width: 100%;
         padding: 0 10px;
+    }
+    
+    .hero-content {
+        gap: 50px;
     }
 }
 
@@ -1175,7 +1192,7 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: #0e7274;
@@ -1187,7 +1204,7 @@ footer {
     }
     
     .nav-links li {
-        margin: 10px 0;
+        margin: 12px 0;
         margin-left: 0;
     }
     
@@ -1221,11 +1238,29 @@ footer {
     .doubts-section {
         max-width: 100%;
     }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .discount-steps {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .hero-text h2 {
@@ -1252,15 +1287,15 @@ footer {
         display: none;
     }
 
-    .discount-steps {
-        grid-template-columns: 1fr 1fr;
+    .step {
+        min-width: 160px;
     }
         
     .example-item {
         min-width: calc(50% - 10px);
     }
 
-     .back-button {
+    .back-button {
         flex-direction: row;
         justify-content: center;
     }
@@ -1269,29 +1304,33 @@ footer {
         width: auto;
     }
 
-     .modal-content {
-    width: 95%;
-    margin: 20px auto;
-    padding: 15px;
-  }
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
   
-  .comparison-table {
-    font-size: 0.85em;
-  }
-
+    .comparison-table {
+        font-size: 0.85em;
+    }
 }
 
 @media (max-width: 576px) {
-
+    html {
+        font-size: 14px;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
     }
+    
     .beneficios-methods {
         grid-template-columns: 1fr;
     }
     
     .beneficio-method {
         width: 100%;
+        max-width: none;
     }
     
     .section-title {
@@ -1311,48 +1350,96 @@ footer {
     }
 
     .comparison-table {
-    display: block;
-    width: 100%;
-  }
+        display: block;
+        width: 100%;
+    }
   
-  .comparison-table thead,
-  .comparison-table tbody,
-  .comparison-table tr,
-  .comparison-table th,
-  .comparison-table td {
-    display: block;
-  }
+    .comparison-table thead,
+    .comparison-table tbody,
+    .comparison-table tr,
+    .comparison-table th,
+    .comparison-table td {
+        display: block;
+    }
   
-  .comparison-table thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
+    .comparison-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
   
-  .comparison-table tr {
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-  }
+    .comparison-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
   
-  .comparison-table td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-    text-align: left;
-  }
+    .comparison-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
   
-  .comparison-table td:before {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    content: attr(data-label);
-    font-weight: bold;
-    color: var(--cor-fundo);
-  }
+    .comparison-table td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--cor-fundo);
+    }
 }
 
+@media (max-width: 375px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .nav-links {
+        font-size: 18px;
+    }
+    
+    .menu-toggle {
+        font-size: 20px;
+    }
+    
+    .presentation-title {
+        font-size: 1.6rem;
+    }
+    
+    .lead-text, .regular-text {
+        font-size: 1rem;
+    }
+}
 
+/* Otimização para dispositivos touch */
+@media (hover: none) {
+    .service-card:hover {
+        transform: none;
+    }
+    
+    .beneficio-method:hover {
+        transform: none;
+    }
+    
+    .step:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .present-image:hover img {
+        transform: none;
+    }
+}
