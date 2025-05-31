@@ -1186,6 +1186,11 @@ footer {
 @media (max-width: 992px) {
     .menu-toggle {
         display: block;
+        
+    }
+
+    .hero {
+        padding-top: 80px; /* Aumente este valor se necessário */
     }
     
     .nav-links {
