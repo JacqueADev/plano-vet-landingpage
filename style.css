@@ -84,7 +84,7 @@ nav {
 
 /* Seção Hero */
 .hero {
-    padding: 100px 0 30px;
+    padding: 200px 0 30px;
     min-height: auto;
     background-color: var(--cor-fundo);
 }
