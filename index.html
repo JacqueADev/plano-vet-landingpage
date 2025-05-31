@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>PLANO VET</title>
+    <title>Plano VET - Plano de Saúde animal</title>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -13,10 +13,11 @@
         <div class="container">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#about">Sobre nós </a></li>
+                    <li><a href="#presents">Sobre nós </a></li>
                     <li><a href="#services">Planos</a></li>
                     <li><a href="#location">Localização</a></li>
                     <li><a href="#contact">Contato</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +40,7 @@
     </section>
 
     <!-- Seção apresentação -->
-<section class="presents">
+<section class="presents" id="presents">
     <div class="container">
         <div class="hero-content reversed"> <!-- Adicionei a classe "reversed" -->
             <div class="present-image">
@@ -141,7 +142,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <!-- Card 1 - Básico -->
                     <div class="service-card" data-service="basico">
                         <i class="fas fa-paw"></i>
-                        <h3>Básico</h3>
+                        <h3>Básico 2.0</h3>
                         <p>O mais em conta</p>
                         <div class="price">R$ 39,00 /Mês</div>
                         
@@ -155,7 +156,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <!-- Card 2 - Intermediário -->
                     <div class="service-card" data-service="intermediario">
                         <i class="fas fa-bone"></i>
-                        <h3>Intermediário</h3>
+                        <h3>Intermediário 4.0</h3>
                         <p>Equilíbrio perfeito</p>
                         <div class="price">R$ 79,90 /Mês</div>
                       
@@ -169,7 +170,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <!-- Card 3 - Premium -->
                     <div class="service-card" data-service="premium">
                         <i class="fas fa-medal"></i>
-                        <h3>Premium</h3>
+                        <h3>Premium 6.0</h3>
                         <p>Cobertura ampla</p>
                         <div class="price">R$ 119,90 /Mês</div>
                         
@@ -183,7 +184,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <!-- Card 4 - Super Premium -->
                     <div class="service-card" data-service="super-premium">
                         <i class="fas fa-crown"></i>
-                        <h3>Super Premium</h3>
+                        <h3>Super Premium 8.0</h3>
                         <p>Cobertura completa</p>
                         <div class="price">R$ 179,90 /Mês</div>
                         
@@ -198,7 +199,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <!-- Card 5 - Silvestres -->
                     <div class="service-card" data-service="silvestres">
                         <i class="fas fa-kiwi-bird"></i>
-                        <h3>Silvestres</h3>
+                        <h3>Silvestres 5.0</h3>
                         <p>Especial para exóticos</p>
                         <div class="price">R$ 119,90 /Mês</div>
                         
@@ -218,7 +219,6 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
     <!-- Seção Cobertura -->
     <section class="coverage" id="coverage">
         <div class="container">
-            <h2 class="section-title">Cobertura dos Planos</h2>
             
             <!-- Plano Básico -->
             <div class="coverage-card" id="coverage-basico">
@@ -373,6 +373,9 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
                         Voltar para os Planos
                     </button>
+      <button class="btn compare-btn" data-plan="basico">
+        Comparar este Plano
+    </button>
                 </div>
             </div>
             
@@ -566,6 +569,9 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
                         Voltar para os Planos
                     </button>
+      <button class="btn compare-btn" data-plan="intermediario">
+        Comparar este Plano
+    </button>
                 </div>
             </div>
             
@@ -877,6 +883,9 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
         <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
             Voltar para os Planos
         </button>
+      <button class="btn compare-btn" data-plan="premium">
+        Comparar este Plano
+    </button>
     </div>
 </div>
             
@@ -1234,6 +1243,9 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
         <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
             Voltar para os Planos
         </button>
+       <button class="btn compare-btn" data-plan="super-premium">
+        Comparar este Plano
+    </button>
     </div>
 </div>
 
@@ -1497,9 +1509,36 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
         <button class="btn" onclick="window.scrollTo({top: document.getElementById('services').offsetTop, behavior: 'smooth'})">
             Voltar para os Planos
         </button>
+      <button class="btn compare-btn" data-plan="silvestres">
+        Comparar este Plano
+    </button>
     </div>
 </div>
         </div>
+
+<!-- Modal de seleção de plano para comparação -->
+<div id="comparisonModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Selecione um plano para comparar</h3>
+        <div class="plan-options">
+            <button class="btn comparison-option" data-plan="basico">Plano Básico</button>
+            <button class="btn comparison-option" data-plan="intermediario">Plano Intermediário</button>
+            <button class="btn comparison-option" data-plan="premium">Plano Premium</button>
+            <button class="btn comparison-option" data-plan="super-premium">Plano Super Premium</button>
+            <button class="btn comparison-option" data-plan="silvestres">Plano Silvestres</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de resultado da comparação -->
+<div id="comparisonResultModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="comparisonTitle">Comparação entre Planos</h3>
+        <div id="comparisonContent"></div>
+    </div>
+</div>
     </section>
 
 
@@ -1737,7 +1776,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
 </section>
 
 <!-- Seção FAQ com Imagem Decorativa -->
-<section class="faq-section">
+<section class="faq-section" id="faq">
     <div class="container">
         <h2 class="section-title">Perguntas Frequentes</h2>
         
@@ -1766,7 +1805,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     </button>
                 </div>
                 <div class="faq-answer">
-                    <p>Disponibilizamos o pagamento por cartão de crédito. Assim todo mês a cobrança é feita automaticamente, sem necessitar de renovação manual!</p>
+                    <p>Disponibilizamos o pagamento por cartão de crédito, onde a cobrança é efetuada automaticamente todos os meses ou boleto, com a emissão mensal de cada documento.</p>
                 </div>
             </div>
             
@@ -1779,7 +1818,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     </button>
                 </div>
                 <div class="faq-answer">
-                    <p>Sim, o cancelamento pode ser feito a qualquer momento sem multa. Basta nos avisar com 30 dias de antecedência.</p>
+                    <p>Sim, o cancelamento pode ser feito a qualquer momento, mas existe uma taxa de multa proporcional ao tempo utilizado.</p>
                 </div>
             </div>
             
@@ -1792,7 +1831,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     </button>
                 </div>
                 <div class="faq-answer">
-                    <p>Sim, atendemos pets com condições pré-existentes, porém algumas condições específicas podem ter restrições de cobertura nos primeiros 12 meses.</p>
+                    <p>Sim, atendemos pets com condições pré-existentes, porém alguns exames para condições específicas podem estar sujeitos ao periodo de carência do plano escolhido.</p>
                 </div>
             </div>
             
@@ -1831,7 +1870,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     </button>
                 </div>
                 <div class="faq-answer">
-                    <p>A microchipagem é um processo simples e seguro em que um pequeno chip eletrônico, do tamanho de um grão de arroz, é implantado sob a pele do animal, geralmente na região do pescoço. O chip contém um número único de identificação que pode ser lido com um scanner apropriado. Esse número é registrado em um banco de dados com as informações do tutor. O procedimento é rápido, praticamente indolor e não oferece riscos à saúde do animal.</p>
+                    <p>A microchipagem é um processo simples e seguro em que um pequeno chip eletrônico, do tamanho de um grão de arroz, é implantado sob a pele do animal, geralmente na região do pescoço. O chip contém um número único de identificação que pode ser lido com um scanner apropriado. Esse número é registrado em um banco de dados com as informações do tutor. O procedimento é rápido, praticamente indolor e não oferece riscos à saúde do animal. Os microchips são importantes para viagens em ambiente nacional ou internacional.</p>
                 </div>
             </div>
 
@@ -1883,7 +1922,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Contato</h3>
-                    <p><i class="fas fa-certificate"></i> CRMV 53006</p>
+                    <p><i class="fas fa-certificate"></i>CRMV-SP JURÍDICO - 53006</p>
                     <p><i class="fas fa-file-contract"></i> CNPJ 59.889.464/0001-43</p>
                     <p><i class="fas fa-phone"></i> (16) 99964-4497</p>
                     <p><i class="fas fa-envelope"></i> planovetplanodesaude@gmail.com</p>
