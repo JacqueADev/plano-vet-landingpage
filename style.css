@@ -1269,6 +1269,16 @@ footer {
         width: auto;
     }
 
+     .modal-content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .comparison-table {
+    font-size: 0.85em;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -1299,6 +1309,50 @@ footer {
     .example-item {
         min-width: 100%;
     }
+
+    .comparison-table {
+    display: block;
+    width: 100%;
+  }
+  
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table th,
+  .comparison-table td {
+    display: block;
+  }
+  
+  .comparison-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .comparison-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .comparison-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+  
+  .comparison-table td:before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--cor-fundo);
+  }
 }
 
 
