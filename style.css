@@ -1213,6 +1213,10 @@ footer {
         margin: 12px 0;
        
     }
+
+     .hero {
+        padding-top: 60px;
+    }
     
     .hero-content {
         flex-direction: column;
