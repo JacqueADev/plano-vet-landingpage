@@ -10,11 +10,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
     line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
 }
 
 header {
@@ -25,6 +26,7 @@ header {
     z-index: 1000;
     padding: 5px 0;
     background: #0e7274;
+    font-family:'Nunito', sans-serif;
 }
 
 nav {
@@ -44,8 +46,7 @@ nav {
     display: flex;
     list-style: none;
     align-items: center;
-    padding-top: 40px;
-    margin-top: 10px;
+    padding: 10px 0px 10px;
     margin-left: auto;
     font-size: 20px;
 }
@@ -56,7 +57,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--cor-fonte-link-1);
+    color: #ffffff;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -86,13 +87,30 @@ nav {
 }
 
 .hero-text h1 {
-    font-size: 2.3rem;
-    color: #ffffff;
+    font-size: 2.6rem;
+
+}
+
+.degrade-dourado {
+  /* Degradê dourado (ajuste as cores conforme seu projeto) */
+  background: linear-gradient(90deg, #8b7701 0%, #e6c14b 50%, #dbd8c8 100%);
+  
+  /* Corta o fundo para aplicar apenas no texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Torna o texto transparente para mostrar o degradê */
+  color: transparent;
+  
+  /* Estilo adicional para destacar */
+  font-weight: 800;
+
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .hero-text h2 {
     font-size: 1.5rem;
-    color: var(--cor-fonte-link-1);
+    color: #d4b95f;
     margin-bottom: 2rem;
     font-weight: bolder;
 }
@@ -110,7 +128,7 @@ nav {
 
 /* Seção apresentação - Versão melhorada */
 .presents {
-    padding: 100px 0;
+    padding: 50px 0;
     background-color: var(--cor-fonte);
     position: relative;
     overflow: hidden;
@@ -129,7 +147,7 @@ nav {
 }
 
 .presents-text {
-    flex: 1;
+    flex: 2;
     padding: 30px;
     position: relative;
 }
@@ -153,18 +171,18 @@ nav {
 }
 
 .lead-text {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    line-height: 1.7;
     color: var(--cor-fundo);
     margin-bottom: 25px;
     font-weight: 500;
 }
 
 .regular-text {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.7;
     color: var(--cor-fundo);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .present-image {
@@ -175,7 +193,7 @@ nav {
 
 .present-image img {
     width: 100%;
-    max-width: 550px;
+    max-width: 580px;
     height: auto;
     border-radius: 15px;
     transition: transform 0.5s ease;
@@ -185,6 +203,13 @@ nav {
     transform: translateY(-5px);
 }
 
+/* Aumenta apenas a imagem da seção 2 */
+.img-maior {
+    max-width: 800px !important; /* Ou o valor desejado (ex: 120% do original) */
+    max-height: 700px !important; /* Ajuste conforme a proporção */
+    width: auto; /* Mantém a proporção */
+    height: auto;
+}
 
 /* Efeitos decorativos opcionais */
 .presents::before {
@@ -197,6 +222,16 @@ nav {
     background-color: rgba(184, 132, 35, 0.05);
     border-radius: 50%;
     z-index: 0;
+}
+
+/* Inverte a ordem apenas na seção com a classe .image-right */
+.image-right .hero-content {
+    flex-direction: row-reverse; /* Inverte a posição da imagem e do texto */
+}
+
+/* Opcional: Ajuste o espaçamento se necessário */
+.image-right .hero-content {
+    gap: 60px; /* Mantém o mesmo gap das outras seções */
 }
 
 /* Beneficios */
@@ -1012,8 +1047,8 @@ nav {
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #0e7274;
+    color: #ffffff;
     padding: 60px 0 20px;
 }
 
@@ -1030,7 +1065,7 @@ footer {
 }
 
 .footer-column p, .footer-column a {
-    color: #ccc;
+    color: #ffffff;
     margin-bottom: 10px;
     display: block;
     text-decoration: none;
@@ -1053,8 +1088,8 @@ footer {
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #555;
-    color: #ccc;
+    border-top: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 
