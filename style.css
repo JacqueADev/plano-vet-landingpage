@@ -95,7 +95,8 @@ nav {
 
 /* Seção Hero */
 .hero {
-    padding: 60px 0 30px;
+    padding-top: 80px; /* Aumentei um pouco para telas maiores */
+    padding-bottom: 30px;
     min-height: auto;
     background-color: var(--cor-fundo);
 }
