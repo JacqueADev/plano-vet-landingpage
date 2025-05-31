@@ -35,6 +35,10 @@ header {
     font-family:'Nunito', sans-serif;
 }
 
+header .container {
+    height: 60px; 
+}
+
 nav {
     display: flex;
     justify-content: space-between;
