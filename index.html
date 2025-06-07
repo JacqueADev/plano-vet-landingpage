@@ -1642,15 +1642,13 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
         </div>
     </section>
 
-     <!-- Formulário de Contato -->
+<!-- Formulário de Contato -->
 <section class="contact-form-container" id="contact">
     <div class="container">
-        
-        
         <div class="contact-columns">
             <!-- Formulário de Contratação -->
             <div class="contact-form-wrapper">
-                <form class="contact-form">
+                <form class="contact-form" id="hireForm">
                     <h2 class="section-title">Formulário de Contratação</h2>
                     <div class="form-group">
                         <label for="tutorName" class="required-field">Nome do tutor</label>
@@ -1664,31 +1662,31 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
 
                     <div class="form-group">
                         <label for="cpf" class="required-field">CPF</label>
-                        <input type="documento" id="cpf" name="cpf" required>
+                        <input type="text" id="cpf" name="cpf" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="required-field">Email</label>
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email">
                     </div>
 
-                     <div class="form-group">
-                        <label for="adress" class="required-field">Endereço</label>
-                        <input type="text" id="adress" name="adress">
+                    <div class="form-group">
+                        <label for="address">Endereço</label>
+                        <input type="text" id="address" name="address">
                     </div>
 
-                     <div class="form-group">
-                        <label for="neighbor" class="required-field">Bairro</label>
+                    <div class="form-group">
+                        <label for="neighbor">Bairro</label>
                         <input type="text" id="neighbor" name="neighbor">
                     </div>
 
                     <div class="form-group">
-                        <label for="city" class="required-field">Cidade</label>
+                        <label for="city">Cidade</label>
                         <input type="text" id="city" name="city">
                     </div>
 
-                     <div class="form-group">
-                        <label for="cep" class="required-field">CEP</label>
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
                         <input type="text" id="cep" name="cep">
                     </div>
 
@@ -1703,22 +1701,22 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     </div>
 
                     <div class="form-group">
-                        <label for="gender" class="required-field">Sexo</label>
+                        <label for="gender">Sexo</label>
                         <input type="text" id="gender" name="gender">
                     </div>
 
                     <div class="form-group">
-                        <label for="raca" class="required-field">Raça</label>
+                        <label for="raca">Raça</label>
                         <input type="text" id="raca" name="raca">
                     </div>
 
                     <div class="form-group">
-                        <label for="age" class="required-field">Idade</label>
+                        <label for="age">Idade</label>
                         <input type="text" id="age" name="age">
                     </div>
 
                     <div class="form-group">
-                        <label for="castrado" class="required-field">Castrado?</label>
+                        <label for="castrado">Castrado?</label>
                         <input type="text" id="castrado" name="castrado">
                     </div>
 
@@ -1736,7 +1734,6 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                             <option value="Premium">Premium 6.0</option>
                             <option value="Super Premium">Super Premium 8.0</option>
                             <option value="Silvestres">Silvestres 5.0</option>
-                            
                         </select>
                     </div>
 
@@ -1745,7 +1742,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                         <textarea id="message" name="message"></textarea>
                     </div>
 
-                    <button type="button" class="form-submit" onclick="sendToWhatsApp()">Contratar</button>
+                    <button type="button" class="form-submit">Contratar</button>
                 </form>
             </div>
 
@@ -1761,7 +1758,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                 <h1>Ainda com dúvidas?</h1>
                 <h2>Nos conte como podemos ajudá-lo</h2>
                 
-                <form class="doubts-form">
+                <form class="doubts-form" id="doubtsForm">
                     <div class="form-group">
                         <input type="text" id="doubtsName" name="doubtsName" placeholder="Nome" required>
                     </div>
@@ -1774,7 +1771,7 @@ Este não é apenas mais um plano — é um serviço pensado nos mínimos detalh
                     <div class="form-group">
                         <textarea id="doubtsMessage" name="doubtsMessage" placeholder="Descreva sua dúvida aqui..." required></textarea>
                     </div>
-                    <button type="button" class="btn doubts-submit" onclick="sendDoubtsToWhatsApp()">Enviar</button>
+                    <button type="button" class="btn doubts-submit">Enviar</button>
                 </form>
             </div>
         </div>
